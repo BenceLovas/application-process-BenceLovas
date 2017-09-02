@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <table>
+        <tr>
+        {% for i in table_header %}
+            <th>{{ i }}</th>    
+        {% endfor %}
+        </tr>
+        {% for i in data %}
+        <tr>
+            {% for j in table_header %}
+                <td>{{ i[j] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    </body>
+</html>
